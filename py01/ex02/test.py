@@ -24,6 +24,9 @@ print("inverse de v2 = ", v2.T())
 v69 = v1 - v4.T()
 print("v1 - v4.T() = ", v69)
 print("v1 / 2 =", v1 / 2)
+print("v1 * 2 =", v1 * 2)
+print(v1)
+v1
 # print(v2.shape)
 # Expected output:
 # (1,4)

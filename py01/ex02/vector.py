@@ -148,6 +148,27 @@ class Vector:
                 raise ValueError("Division by zero")
         else:
             raise ValueError("Division is only defined between a vector and a number")
-    def __rtruediv__(self, v2):
-        return self.__truediv__(v2)
-    
+    def __rtruediv__(self, num):
+        raise NotImplementedError("Division of a scalar by a Vector is not defined here.")
+    def __mul__(self, num):
+        if isinstance(num, float) or isinstance(num, int):
+            if self.shape == (self.size, 1):
+                ret = []
+                i = 0
+                while i < self.size:                        
+                    ret.append([self.values[i][0] * num])
+                    i += 1
+                return Vector(ret)
+            else:
+                ret = [[]]
+                i = 0
+                while i < self.size:
+                    ret[0].append(self.values[0][i] * num)
+                    i += 1
+                return Vector(ret)
+        else:
+            raise ValueError("Multiplication is only defined between a vector and a number")
+    def __rmul__(self, num):
+        return self.__mul__(num)
+    def __repr__(self):
+        return self.__str__()
