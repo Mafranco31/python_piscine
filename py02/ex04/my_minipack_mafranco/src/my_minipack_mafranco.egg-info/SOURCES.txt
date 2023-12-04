@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/logger/decorator.py
+src/my_minipack_mafranco.egg-info/PKG-INFO
+src/my_minipack_mafranco.egg-info/SOURCES.txt
+src/my_minipack_mafranco.egg-info/dependency_links.txt
+src/my_minipack_mafranco.egg-info/top_level.txt
+src/progress/charging_bar.py
