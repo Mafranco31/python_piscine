@@ -30,7 +30,29 @@ class Fileloader:
         else:
             print("n must be a non-null integer")
 
+from ex01_filter_get_value import youngest_fellah
+from ex02_proportion_drop import proportion_by_sport
+from ex03_sort_iloc_id import how_many_medals
+from ex04_find_value_with_anther import SpatioTemporalData
+from ex05_medals_per_country import how_many_medals_by_country
+from ex06 import MyPlotLib
+
 if __name__ == "__main__":
     fl = Fileloader()
     data = fl.load("athlete_events.csv")
-    fl.display(data, 5)
+    print(youngest_fellah(data, 2004))
+    print(proportion_by_sport(data, 2004, 'Tennis', 'F'))
+    print(how_many_medals(data, 'Kjetil Andr Aamodt'))
+    sp = SpatioTemporalData(data)
+    print(sp.where(1896))
+    print(sp.where(2016))
+    print(sp.when('Athina'))
+    print(sp.when('Paris'))
+    mpl = MyPlotLib()
+    #mpl.histogram(data[data['Sex']=='M'], 'Height')
+    #mpl.histogram(data, ('Weight', 'Height'))
+    #mpl.density(data, ('Weight', 'Height'))
+    #mpl.pair_plot(data, ('Weight', 'Height'))
+    #mpl.box_plot(data, ('Weight', 'Height', 'Age'))
+    #print(how_many_medals_by_country(data, 'France'))
+    #fl.display(data, 5)
