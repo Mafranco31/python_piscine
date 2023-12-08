@@ -59,12 +59,12 @@ class CsvReader():
         else:
             return None
 
-with CsvReader('good.csv', ',', True, 0, 0) as file:
-    data = file.getdata()
-    header = file.getheader()
-    print(data)
-    print(header)
+#with CsvReader('good.csv', ',', True, 0, 0) as file:
+ #   data = file.getdata()
+  #  header = file.getheader()
+   # print(data)
+    #print(header)
 
-with CsvReader('bad.csv') as file:
-    if file == None:
-        print("File is corrupted")
+#with CsvReader('bad.csv') as file:
+#   if file == None:
+ #     print("File is corrupted")

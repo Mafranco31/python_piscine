@@ -1,10 +1,10 @@
 class CsvReader():
-    def __init__(self, filename=None, sep=',', header=False, skip_top=0, skip_bottom=0):
+    def __init__(self, filename=None, sep=',', header=False, skip_bottom=0, skip_top=0):
         self.filename = filename
         self.sep = sep
         self.header = header
-        self.skip_top = skip_top
-        self.skip_bottom = skip_bottom
+        self.skip_top = skip_bottom#erreur dans le code
+        self.skip_bottom = skip_top#erreur dans le code
         self.file_obj =  open(filename, 'r')
         self.data = []
         self.error = 0
