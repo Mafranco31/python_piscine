@@ -36,6 +36,7 @@ from ex03_sort_iloc_id import how_many_medals
 from ex04_find_value_with_anther import SpatioTemporalData
 from ex05_medals_per_country import how_many_medals_by_country
 from ex06 import MyPlotLib
+from ex07 import Komparator
 
 if __name__ == "__main__":
     fl = Fileloader()
@@ -54,5 +55,9 @@ if __name__ == "__main__":
     #mpl.density(data, ('Weight', 'Height'))
     #mpl.pair_plot(data, ('Weight', 'Height'))
     #mpl.box_plot(data, ('Weight', 'Height', 'Age'))
+    kp = Komparator(data)
+    #kp.compare_box_plots('Sex', 'Weight')
+    #kp.density('Sex', 'Weight')
+    kp.compare_histograms('Sex', 'Weight')
     #print(how_many_medals_by_country(data, 'France'))
     #fl.display(data, 5)

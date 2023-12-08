@@ -39,7 +39,8 @@ class MyPlotLib:
             print("Pair plot needs a tuple of features")
         return 
     def box_plot(self, data, features):
-        df = data.loc[:, features]
+        #df = data.loc[:, features]
+        #df.boxplot()
         data.boxplot(column=list(features))
         plt.show()
         return 
