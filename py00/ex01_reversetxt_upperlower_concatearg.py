@@ -5,7 +5,7 @@ script_name = sys.argv[0]
 arguments = sys.argv[1:]
 arguments = ' '.join(arguments)
 
-if not sys.argv[1]:
+if  len(sys.argv) == 1:
     print('You must enter a string as argment.')
 
 def reverse_text(input_text):
